@@ -1,0 +1,43 @@
+/*Custom fonts*/
+@font-face {
+    font-family: 'HeaderFont'; /*a name to be used later*/
+    src: url('BebasNeue-Regular.ttf'); /*URL to font*/
+}
+
+.createAccount{
+	font-family: 'HeaderFont';
+    color: #333333;
+    list-style:none;
+    margin:0;
+    padding:10px;
+    text-align: left;
+}
+
+input[type=text] {
+  width:15%;
+  text-align: center;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width:20%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #7e7e7e;
+  border-radius: 8px;
+  border: 2px solid black;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
