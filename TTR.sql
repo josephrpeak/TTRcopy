@@ -42,4 +42,21 @@ CREATE TABLE customer (
 	#FOREIGN KEY (username) REFERENCES account(username)
 );
 
+CREATE TABLE cart (
+	cartID int(10) NOT NULL AUTO_INCREMENT,
+	accountID NOT NULL,
+	PRIMARY KEY(cartID),
+	FOREIGN KEY(accountID),
+);
+
+CREATE TABLE cartitems (
+	cartitemsID int(10) NOT NULL AUTO_INCREMENT,
+	cartID NOT NULL,
+	product_name var_char(30) NOT NULL,
+	product_price decimal(8) NOT NULL,
+	PRIMARY KEY(cartitemsID),
+	FOREIGN KEY(cartID),
+);
+
+
 
