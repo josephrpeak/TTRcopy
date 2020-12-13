@@ -26,6 +26,7 @@ else{
 
 if(mysqli_query($link, $sql)){
     echo "Account created successfully. Redirecting to homepage...";
+    $_SESSION['username'] = $username;
     header("Refresh:3; logged_in_index.html");
 } 
 else{

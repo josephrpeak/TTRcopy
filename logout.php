@@ -1,10 +1,8 @@
- <?php
- session_start();
+<?php
+	session_start();
 
- if (isset($_SESSION['username'])) {
-   echo "User is logged in.";
- }
- else {
- 	echo "User not logged in.";
- }
- ?>
+	echo "Logging out...";
+	session_unset();
+	session_destroy();
+	header("Refresh:2; index.html");
+?>
