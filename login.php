@@ -1,38 +1,24 @@
 <?php
-// format: (host, username, password, database_name)
-$link = mysqli_connect("localhost", "root", "root", "TTR");
- 
-// Check connection
-/*if($link === false){
-    die("ERROR: Could not connect." . mysqli_connect_error());
-}*/
+  session_start();
 
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  exit();
-}
+  $link = mysqli_connect("localhost", "root", "root", "TTR");
+  $username = mysqli_real_escape_string($link,$_POST['username']);
+  $password = mysqli_real_escape_string($link,$_POST['password']); 
 
-if (isset( $_POST['submit'])) {
-	$username = $_POST['username']; 
-	$password = $_POST['password'];
-} 
+  $sql = "SELECT * FROM account WHERE username = '$username' and password = '$password'";
 
-// Perform query 
-$result = mysqli_query($link, "SELECT * FROM account WHERE username=$username and password=$password");
-
-if(mysqli_num_rows($result)==1)
-{
-	echo "Logged in successfully.";
+  $result = mysqli_query($link,$sql);
+  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+  $active = $row['active'];
+  $error = "Your Login Name or Password is invalid";
+  $count = mysqli_num_rows($result);
+  
+  if($count > 0) {
+    echo "Logged in successfully. Redirecting to homepage...";
     header("Refresh:3; logged_in_index.html");
-    mysqli_free_result($result);
-}
-else
-{
-	header("Refresh:3; login.html");
-	echo "Could not find your account.";
-	mysqli_free_result($result);
-}
-
-// Close connection
-mysqli_close($link);
+    exit();
+  }
+  else {
+     echo $error;
+   }
 ?>
