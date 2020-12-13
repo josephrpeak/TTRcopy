@@ -14,8 +14,9 @@
   $count = mysqli_num_rows($result);
   
   if($count > 0) {
-    echo "Logged in successfully. Redirecting to homepage...";
-    header("Refresh:3; logged_in_index.html");
+    $_SESSION['username'] = $username;
+    echo "Logged in successfully.";
+    header("Refresh:3; logout.php");
     exit();
   }
   else {
