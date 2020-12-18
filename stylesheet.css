@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'HeaderFont'; 
+    src: url('BebasNeue-Regular.ttf'); 
+}
+
+.header {
+  background: url("buncharecords.jpg") top center;
+  padding: 80px; 
+  font-family: 'HeaderFont';
+  text-align: center; 
+  
+  color: #f5f5f5;
+}
+
+.header h1 {
+  font-size: 80px;
+}
+
+.navbar {
+	  font-family: 'HeaderFont';
+    border:1px solid #333333;
+    border-width:3px 0px 3px 0px;
+    color: #333333;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.navbar li{
+    display:inline;
+}
+
+.navbar a {
+    display:inline-block;
+    color: #333333;
+    padding:15px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+	background-color: #f5f5f5;
+  color: #333333; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  font-family: 'HeaderFont';
+  background-color: #f5f5f5;
+  text-align: center;
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 20%;
+}
+
+.middle {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*------------------------*/
+
+.MonthlyMusic{
+    font-family: 'HeaderFont';
+    color: #333333;
+    list-style:none;
+    margin:0;
+    padding:10px;
+    text-align: left;
+}
+
+.MonthlyMusic ul{
+  font-size: 25px;
+}
+
+.CreateAccount {
+  text-align: center;
+  font-family: 'HeaderFont';
+}
+
+
+/*---Keep this stuff at the bottom of the page.---*/
+.footer {
+	font-family: 'HeaderFont';
+	color: #f5f5f5;
+	text-align: right;
+	font-size: 8px;
+  	padding: 20px; /* Some padding */
+ 	background: #333333; /* Grey background */
+}

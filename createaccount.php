@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // format: (host, username, password, database_name)
 $link = mysqli_connect("localhost", "root", "root", "TTR");
  

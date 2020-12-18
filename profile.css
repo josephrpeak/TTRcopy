@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'HeaderFont'; 
+    src: url('BebasNeue-Regular.ttf'); 
+}
+
+.credentials {
+  font-family: 'HeaderFont';
+  text-align: center;
+  float: left;
+}
