@@ -24,3 +24,12 @@
 	}
 	
 ?>
+
+<html>
+  <button id="myButton" class="float-left submit-button" >Edit Profile</button>
+	<script type="text/javascript">
+    	document.getElementById("myButton").onclick = function () {
+      	  location.href = "editprofile.html";
+    	};
+	</script>
+</html>
